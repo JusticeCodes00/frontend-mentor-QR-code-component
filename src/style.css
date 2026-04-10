@@ -1,4 +1,38 @@
-/* RESET */
+/* FONT FACES */
+
+@font-face {
+  font-family: "Outfit";
+  src:
+    url("./assets/fonts/Outfit-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Outfit-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src:
+    url("./assets/fonts/Outfit-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Outfit-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CUSTOM PROPERTIES */
+
+:root {
+  --color-bg: hsl(212, 45%, 89%);
+  --color-bg-qr-code: hsl(0, 0%, 100%);
+
+  --color-text: hsl(216, 15%, 48%);
+  --color-text-heading: hsl(218, 44%, 22%);
+
+  --font-size-body: 0.9375rem;
+}
+
+/* RESET & BASE STYLES */
 
 * {
   box-sizing: border-box;
@@ -6,24 +40,75 @@
   padding: 0;
 }
 
-/* BASE STYLES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--color-text-heading);
+}
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: Outfit, system-ui, sans-serif;
   line-height: 1.5;
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 /* LAYOUT */
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   min-height: 100vh;
+  background-color: var(--color-bg);
 }
 
-.attribution {
-  font-size: 0.6875rem;
+/* COMPONENTS */
+
+/* QR code card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-bg-qr-code);
+
+  max-width: 320px;
+  padding: 1rem 1rem 2.5rem;
+  border-radius: 20px;
+
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.card-content {
+  max-width: 256px;
   text-align: center;
+  margin: 0 1rem;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.card-content h1 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
+
+.card-content p {
+  letter-spacing: 0.2px;
+}
+
