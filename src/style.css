@@ -1,0 +1,29 @@
+/* RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BASE STYLES */
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+/* LAYOUT */
+
+main {
+  min-height: 100vh;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
