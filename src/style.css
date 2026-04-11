@@ -85,7 +85,7 @@ main {
   align-items: center;
   background-color: var(--color-bg-qr-code);
 
-  max-width: 320px;
+  width: min(90%, 20rem);
   padding: 1rem 1rem 2.5rem;
   border-radius: 20px;
 
@@ -111,4 +111,3 @@ main {
 .card-content p {
   letter-spacing: 0.2px;
 }
-
