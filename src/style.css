@@ -47,7 +47,6 @@ h4,
 h5,
 h6 {
   font-family: inherit;
-  font-size: inherit;
   font-weight: bold;
   line-height: 1.2;
   color: var(--color-text-heading);
