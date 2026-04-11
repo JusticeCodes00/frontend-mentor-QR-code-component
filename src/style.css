@@ -94,7 +94,7 @@ main {
 
 .card img {
   border-radius: 10px;
-  margin-bottom: 1.5rem;
+  margin-block-end: 1.5rem;
 }
 
 .card-content {
